@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>바라다 공간디자인 | 청주 · 오창 아파트 · 상가 인테리어</title>
+<meta name="description" content="바라는 대로, 바라다 공간디자인. 청주 · 오창을 중심으로 충청권 아파트 · 상가 인테리어. 무료 상담 예약 · 카카오톡 · 전화 010-3421-3532." />
+<link rel="canonical" href="https://barada-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="바라다 공간디자인" />
+<meta property="og:title" content="바라다 공간디자인 · 바라는 대로," />
+<meta property="og:description" content="청주 · 오창 아파트 · 상가 인테리어. 당신이 바라는 공간을 함께 만들어 갑니다." />
+<meta property="og:url" content="https://barada-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://barada-sample.lgt3232.workers.dev/og-barada.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<link rel="preload" href="bd-pretendard.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="bd-hero.webp" as="image" />
+<!-- 시안 도메인 = barada-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "바라다 공간디자인",
+  "url": "https://barada-sample.lgt3232.workers.dev/",
+  "image": "https://barada-sample.lgt3232.workers.dev/og-barada.jpg",
+  "telephone": "+82-10-3421-3532",
+  "address": { "@type": "PostalAddress", "streetAddress": "오창읍 주성2길 22-11", "addressLocality": "청주시 청원구", "addressRegion": "충청북도", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/design_barada/","https://blog.naver.com/barada_design"]
+}
+</script>
+<style>
+@font-face{ font-family:"BD Sans"; font-weight:300 600; font-display:swap; src:url("bd-pretendard.woff2") format("woff2"); }
+@font-face{ font-family:"BD Latin"; font-weight:400 600; font-display:swap; src:url("bd-outfit.woff2") format("woff2"); }
+
+:root{
+  /* v0.2 갤러리형: 흰 바탕 + 로고 크림(242,239,232)을 아주 옅게 */
+  --white:#FFFFFF;
+  --tint:#F7F5F0;
+  --ink:#111111;
+  --soft:#5E5A53;        /* 흰 6.9:1 · 옅은 크림 6.3:1 */
+  --line:#E4E0D7;
+  --latin:"BD Latin","BD Sans",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --sans:"BD Sans",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --wrap:1280px;
+  --r:2px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--white); color:var(--ink); font-family:var(--sans); font-weight:400; font-size:16px; line-height:1.85; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,p{ margin:0; }
+button{ font:inherit; color:inherit; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, var(--wrap)); margin:0 auto; }
+.sec{ padding:100px 0; }
+@media (min-width:900px){ .sec{ padding:150px 0; } }
+
+.label{ font-family:var(--latin); font-weight:500; font-size:.8rem; letter-spacing:.26em; color:var(--soft); }
+.h2{ margin-top:14px; font-weight:300; font-size:clamp(1.7rem,3.6vw,2.4rem); line-height:1.45; letter-spacing:-.02em; }
+
+.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 26px; border:1px solid var(--ink); border-radius:var(--r); font-size:.94rem; font-weight:500; letter-spacing:.02em; transition:background .2s ease, color .2s ease, transform .15s ease; }
+.btn.fill{ background:var(--ink); color:var(--white); }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:not(.fill):not(.ghost):hover{ background:var(--ink); color:var(--white); } .btn.fill:hover{ background:#333; border-color:#333; } }
+
+/* 헤더 */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.97); border-bottom:1px solid var(--line); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; }
+@media (min-width:900px){ .site-head .wrap{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:24px; } .head-cta{ justify-self:end; } }
+.brand img{ height:26px; width:auto; }
+.nav{ display:none; gap:36px; font-family:var(--latin); font-size:.82rem; letter-spacing:.18em; }
+@media (min-width:900px){ .nav{ display:flex; } }
+@media (hover:hover){ .nav a:hover{ color:var(--soft); } }
+.head-cta{ min-height:38px; padding:0 16px; font-size:.84rem; }
+@media (max-width:899px){ .head-cta{ display:none; } }
+.menu-btn{ display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 4px; background:none; border:0; font-size:.9rem; cursor:pointer; }
+.menu-btn i{ display:block; width:18px; height:1px; background:var(--ink); box-shadow:0 6px 0 var(--ink), 0 -6px 0 var(--ink); }
+@media (min-width:900px){ .menu-btn{ display:none; } }
+.m-nav{ display:none; position:fixed; left:0; right:0; top:65px; z-index:49; background:var(--white); border-bottom:1px solid var(--line); padding:6px 20px 18px; }
+.m-nav.open{ display:block; }
+.m-nav a{ display:block; padding:14px 0; border-bottom:1px solid var(--line); font-family:var(--latin); letter-spacing:.16em; font-size:.9rem; }
+@media (min-width:900px){ .m-nav{ display:none !important; } }
+
+/* 히어로: 화면 가득 사진 + 한 줄 + 버튼 하나 */
+.hero{ position:relative; height:min(86svh,860px); min-height:460px; overflow:hidden; background:#2A2825; }
+.hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.18) 45%, rgba(0,0,0,.52) 100%); }
+.hero .text{ position:absolute; left:0; right:0; bottom:0; z-index:1; padding:0 0 64px; color:#fff; }
+@media (min-width:900px){ .hero .text{ padding-bottom:88px; } }
+.hero h1{ font-weight:300; font-size:clamp(2rem,5vw,3.4rem); line-height:1.35; letter-spacing:-.02em; }
+.hero p{ margin-top:12px; font-family:var(--latin); font-size:.82rem; letter-spacing:.26em; color:#EDEBE6; }
+.hero .btn{ margin-top:28px; border-color:#fff; color:#fff; background:rgba(0,0,0,.2); }
+@media (hover:hover){ .hero .btn:hover{ background:#fff; color:var(--ink); } }
+
+/* 소개: 짧은 한 단락 */
+.intro{ text-align:center; }
+.intro .text{ max-width:36em; margin:22px auto 0; font-weight:300; font-size:clamp(1.15rem,2.4vw,1.45rem); line-height:2; }
+.intro .sign{ margin-top:22px; font-size:.92rem; color:var(--soft); }
+
+/* 포트폴리오: 큰 사진 2단 (모바일 1단 전체 폭) */
+.works{ padding:20px 0 110px; }
+@media (min-width:900px){ .works{ padding:20px 0 150px; } }
+.works-head{ display:grid; gap:6px; margin-bottom:40px; }
+@media (min-width:900px){ .works-head{ grid-template-columns:minmax(0,1fr) auto; align-items:end; margin-bottom:56px; } }
+.works-head .more{ font-size:.92rem; color:var(--soft); text-decoration:underline; text-underline-offset:4px; }
+.gallery{ columns:1; column-gap:16px; }
+@media (min-width:900px){ .gallery{ columns:2; column-gap:20px; } }
+.gallery img{ width:100%; margin:0 0 16px; break-inside:avoid; }
+@media (min-width:900px){ .gallery img{ margin-bottom:20px; } }
+.g-wrap{ width:100%; margin:0 auto; }
+@media (min-width:900px){ .g-wrap{ width:min(100% - 40px, var(--wrap)); } }
+.cases{ margin:64px 0 0; padding:0; list-style:none; border-top:1px solid var(--ink); }
+.cases li{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:16px; padding:15px 0; border-bottom:1px solid var(--line); font-size:.95rem; }
+.cases span{ color:var(--soft); }
+.cases time{ font-family:var(--latin); font-size:.88rem; color:var(--soft); }
+
+/* 상담 · 오시는 길 (R-1: 모바일 지도 1열 전체 폭) */
+.contact{ background:var(--tint); }
+.contact .wrap{ display:grid; gap:44px; }
+@media (min-width:768px){ .contact .wrap{ grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:64px; align-items:start; } }
+.contact .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+.contact .note{ margin-top:14px; font-size:.9rem; color:var(--soft); }
+.info{ margin:36px 0 0; border-top:1px solid var(--ink); }
+.info div{ display:grid; grid-template-columns:64px minmax(0,1fr); gap:12px; padding:14px 0; border-bottom:1px solid var(--line); }
+.info dt{ font-weight:500; }
+.info dd{ margin:0; color:var(--soft); }
+.info dd b{ color:var(--ink); font-weight:500; }
+.info dd small{ display:block; margin-top:3px; font-size:.88rem; }
+.info a{ text-decoration:underline; text-underline-offset:3px; }
+.map{ display:block; width:100%; height:260px; border:0; border-radius:var(--r); background:var(--white); }
+@media (min-width:768px){ .map{ height:520px; } }
+
+/* 푸터 */
+.foot{ border-top:1px solid var(--line); padding:44px 0 calc(110px + env(safe-area-inset-bottom)); font-size:.86rem; color:var(--soft); }
+@media (min-width:900px){ .foot{ padding:48px 0; } }
+.foot .wrap{ display:grid; gap:14px; }
+@media (min-width:900px){ .foot .wrap{ grid-template-columns:auto minmax(0,1fr); gap:40px; align-items:center; } }
+.foot img{ width:92px; }
+.foot p + p{ margin-top:2px; }
+
+/* 모바일 하단 바 (불투명) */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--white); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--ink); border-radius:var(--r); font-size:.9rem; font-weight:500; background:var(--white); }
+.quick a.fill{ background:var(--ink); color:var(--white); }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 리빌: 사진 로드 후 페이드 (setInterval) */
+.js .reveal{ opacity:0; transform:translateY(14px); transition:opacity .8s ease, transform .8s ease; }
+.js .reveal.in{ opacity:1; transform:none; }
+@media print{ .js .reveal{ opacity:1; transform:none; } }
+</style>
+<noscript><style>.reveal{ opacity:1 !important; transform:none !important; }</style></noscript>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="바라다 공간디자인 처음으로"><img src="bd-mark.webp" alt="brd. 바라다 공간디자인" width="301" height="131" /></a>
+    <nav class="nav" aria-label="주요 메뉴"><a href="#about">ABOUT</a><a href="#works">PORTFOLIO</a><a href="#contact">CONTACT</a></nav>
+    <a class="btn fill head-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf822vCY8yBG3VFQwUfJYAgoz5Af50GTtGQJEQg-M371Se_EQ/viewform" target="_blank" rel="noopener">무료 상담 예약</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="m-nav"><i aria-hidden="true"></i>메뉴</button>
+  </div>
+</header>
+<nav class="m-nav" id="m-nav" aria-label="모바일 메뉴">
+  <a href="#about">ABOUT</a><a href="#works">PORTFOLIO</a><a href="#contact">CONTACT</a>
+</nav>
+
+<main id="top">
+  <section class="hero" aria-label="바라다 공간디자인">
+    <img src="bd-hero.webp" alt="밝은 거실에서 본 초록 아일랜드 주방" width="1440" height="1080" fetchpriority="high" />
+    <div class="wrap text">
+      <h1>바라는 대로,<br />바라다 공간디자인</h1>
+      <p>INTERIOR DESIGN STUDIO · CHEONGJU</p>
+      <a class="btn ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSf822vCY8yBG3VFQwUfJYAgoz5Af50GTtGQJEQg-M371Se_EQ/viewform" target="_blank" rel="noopener">무료 상담 예약</a>
+    </div>
+  </section>
+
+  <section class="sec intro" id="about" aria-labelledby="about-h">
+    <div class="wrap reveal">
+      <p class="label" id="about-h">ABOUT</p>
+      <p class="text">누군가의 공간을 꾸며 준다는 것은 경제활동 이전에 보람을 느끼는 일입니다. 책임감을 갖고 믿음을 드리겠습니다.</p>
+      <p class="sign">청주 · 오창 아파트, 상가 인테리어 · 바라다 공간디자인</p>
+    </div>
+  </section>
+
+  <section class="works" id="works" aria-labelledby="works-h">
+    <div class="wrap works-head reveal">
+      <div><p class="label">PORTFOLIO</p><h2 id="works-h" class="h2">시공 사례</h2></div>
+      <a class="more" href="https://blog.naver.com/barada_design" target="_blank" rel="noopener">블로그에서 더 보기</a>
+    </div>
+    <div class="g-wrap">
+      <div class="gallery">
+        <img class="reveal" loading="lazy" src="bd-photo-01.webp" alt="밝은 원목 바닥의 넓은 거실과 벽면 수납장" width="1200" height="900" />
+        <img class="reveal" loading="lazy" src="bd-photo-02.webp" alt="아치형 벽 안쪽 커튼이 드리운 창가 공간" width="966" height="966" />
+        <img class="reveal" loading="lazy" src="bd-photo-03.webp" alt="원목 식탁과 흰 아일랜드가 놓인 주방" width="966" height="966" />
+        <img class="reveal" loading="lazy" src="bd-photo-04.webp" alt="원목 벽과 조명 거울이 있는 욕실 세면대" width="1157" height="1446" />
+        <img class="reveal" loading="lazy" src="bd-photo-05.webp" alt="회색 상하부장과 아일랜드가 있는 주방" width="1080" height="1364" />
+        <img class="reveal" loading="lazy" src="bd-photo-06.webp" alt="둥근 창이 난 초록 중문과 패턴 타일 현관" width="800" height="1000" />
+        <img class="reveal" loading="lazy" src="bd-photo-07.webp" alt="둥근 창이 난 초록 벽과 소파가 있는 거실" width="1080" height="1080" />
+        <img class="reveal" loading="lazy" src="bd-photo-08.webp" alt="흰 ㄱ자 주방과 간접 조명" width="1200" height="900" />
+        <img class="reveal" loading="lazy" src="bd-photo-09.webp" alt="큰 창 너머로 도시가 보이는 거실" width="940" height="940" />
+        <img class="reveal" loading="lazy" src="bd-photo-10.webp" alt="키큰장과 조명 수납이 있는 벽면" width="1200" height="1500" />
+        <img class="reveal" loading="lazy" src="bd-photo-11.webp" alt="흰 식탁 의자와 키큰장이 있는 다이닝" width="965" height="1288" />
+        <img class="reveal" loading="lazy" src="bd-photo-12.webp" alt="조명을 넣은 붙박이장과 수납 벽" width="1200" height="900" />
+      </div>
+    </div>
+    <div class="wrap">
+      <ul class="cases reveal">
+        <li><span>오창 대성베르힐 아파트 · 오창 2산단 30평대</span><time datetime="2026-10-12">2026.10</time></li>
+        <li><span>청주 율량금호어울림 센트로 · 24평</span><time datetime="2026-10-11">2026.10</time></li>
+        <li><span>청주 옥산 흥덕 코오롱하늘채 아파트</span><time datetime="2026-05-15">2026.05</time></li>
+        <li><span>청주 오창 롯데캐슬 더하이스트 아파트</span><time datetime="2026-05-08">2026.05</time></li>
+        <li><span>청주 오창 부영아파트 7단지 · 23평</span><time datetime="2026-05-07">2026.05</time></li>
+        <li><span>청주 오창 2산단 대원칸타빌 · 33평</span><time datetime="2026-05-05">2026.05</time></li>
+        <li><span>청주 오창 모아미래도와이드파크 · 25평</span><time datetime="2026-04-29">2026.04</time></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">CONTACT</p>
+        <h2 id="contact-h" class="h2">편한 방법으로<br />상담하세요</h2>
+        <div class="cta">
+          <a class="btn fill" href="https://docs.google.com/forms/d/e/1FAIpQLSf822vCY8yBG3VFQwUfJYAgoz5Af50GTtGQJEQg-M371Se_EQ/viewform" target="_blank" rel="noopener">무료 상담 예약</a>
+          <a class="btn" href="https://open.kakao.com/o/sVelOIGe" target="_blank" rel="noopener">카카오톡 상담</a>
+          <a class="btn" href="tel:01034213532">전화하기</a>
+        </div>
+        <p class="note">블로그 안의 &lt;온라인 견적신청&gt;으로도 견적 문의가 가능합니다.</p>
+        <dl class="info">
+          <div><dt>주소</dt><dd><b>충북 청주시 청원구 오창읍 주성2길 22-11</b><small><a href="https://map.naver.com/p/entry/place/1365790485" target="_blank" rel="noopener">네이버 지도에서 보기</a></small></dd></div>
+          <div><dt>영업</dt><dd><b>월 – 토 09:00 – 20:00</b><small>휴게시간 12:00 – 13:00 · 매주 일요일 정기휴무</small></dd></div>
+          <div><dt>전화</dt><dd><a href="tel:01034213532">010-3421-3532</a></dd></div>
+        </dl>
+      </div>
+      <iframe class="map reveal" title="바라다 공간디자인 위치 지도" src="https://www.google.com/maps?q=%EC%B6%A9%EB%B6%81%20%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EC%B2%AD%EC%9B%90%EA%B5%AC%20%EC%98%A4%EC%B0%BD%EC%9D%8D%20%EC%A3%BC%EC%84%B12%EA%B8%B8%2022-11&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="bd-logo.webp" alt="" width="321" height="237" loading="lazy" />
+    <div>
+      <p>바라다 공간디자인 · 충북 청주시 청원구 오창읍 주성2길 22-11 · 010-3421-3532 · 월 – 토 09:00 – 20:00, 일요일 휴무</p>
+      <p><a href="https://www.instagram.com/design_barada/" target="_blank" rel="noopener">Instagram</a> · <a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener">Blog</a> · © 바라다 공간디자인</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://docs.google.com/forms/d/e/1FAIpQLSf822vCY8yBG3VFQwUfJYAgoz5Af50GTtGQJEQg-M371Se_EQ/viewform" target="_blank" rel="noopener">상담 예약</a>
+  <a href="https://open.kakao.com/o/sVelOIGe" target="_blank" rel="noopener">카톡</a>
+  <a href="tel:01034213532">전화</a>
+</nav>
+
+<script>
+(function(){
+  /* 모바일 메뉴 */
+  var btn=document.querySelector('.menu-btn'), mnav=document.getElementById('m-nav');
+  function setMenu(open){ mnav.classList.toggle('open',open); btn.setAttribute('aria-expanded',open?'true':'false'); }
+  btn.addEventListener('click',function(){ setMenu(!mnav.classList.contains('open')); });
+  [].forEach.call(mnav.querySelectorAll('a'),function(a){ a.addEventListener('click',function(){ setMenu(false); }); });
+  /* 리빌: 사진 로드 후 페이드 + 폰트 준비 후 시작 */
+  function show(el){
+    if(el._wait) return;
+    var imgs=el.tagName==='IMG'?[el]:[].slice.call(el.querySelectorAll('img'));
+    var left=imgs.filter(function(i){ return !i.complete; });
+    if(!left.length){ el.classList.add('in'); return; }
+    el._wait=true; var n=left.length;
+    var fin=function(){ if(--n<=0) el.classList.add('in'); };
+    left.forEach(function(i){
+      if(i.loading==='lazy') i.loading='eager';
+      i.addEventListener('load',fin,{once:true}); i.addEventListener('error',fin,{once:true});
+    });
+    setTimeout(function(){ el.classList.add('in'); },2500);
+  }
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  function tick(){
+    if(!pending.length){ clearInterval(t); return; }
+    if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){
+      pending.forEach(show); pending=[]; return;
+    }
+    var line=window.innerHeight*0.92;
+    pending=pending.filter(function(el){
+      if(el.getBoundingClientRect().top < line){ show(el); return false; }
+      return true;
+    });
+  }
+  var t, started=false;
+  function start(){ if(started) return; started=true; tick(); t=setInterval(tick,120); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(start); }
+  setTimeout(start,1200);
+  /* 앵커 스크롤 */
+  var head=document.querySelector('.site-head');
+  [].forEach.call(document.querySelectorAll('a[href^="#"]'),function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); var el=id==='#top'?document.body:document.querySelector(id);
+      if(!el) return; e.preventDefault();
+      var s0=window.pageYOffset, end=id==='#top'?0:el.getBoundingClientRect().top+s0-head.offsetHeight+1;
+      var t0=Date.now(), dur=560;
+      var iv=setInterval(function(){
+        var p=Math.min((Date.now()-t0)/dur,1), e2=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+        window.scrollTo(0,s0+(end-s0)*e2);
+        if(p>=1) clearInterval(iv);
+      },16);
+    });
+  });
+})();
+</script>
+</body>
+</html>
