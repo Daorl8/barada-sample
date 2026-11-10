@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>바라다 공간디자인 | 청주 · 오창 아파트 · 상가 인테리어</title>
-<meta name="description" content="바라는 대로, 바라다 공간디자인. 청주 · 오창을 중심으로 충청권 아파트 · 상가 인테리어. 무료 상담 예약 · 카카오톡 · 전화 010-3421-3532." />
+<title>바라다 공간디자인 | 청주 · 오창 아파트 인테리어</title>
+<meta name="description" content="바라는 대로, 바라다 공간디자인. 청주 · 오창을 중심으로 충청권 아파트 인테리어. 무료 상담 예약 · 카카오톡 · 전화 010-3421-3532." />
 <link rel="canonical" href="https://barada-sample.lgt3232.workers.dev/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:site_name" content="바라다 공간디자인" />
 <meta property="og:title" content="바라다 공간디자인 · 바라는 대로," />
-<meta property="og:description" content="청주 · 오창 아파트 · 상가 인테리어. 당신이 바라는 공간을 함께 만들어 갑니다." />
+<meta property="og:description" content="청주 · 오창 아파트 인테리어. 당신이 바라는 공간을 함께 만들어 갑니다." />
 <meta property="og:url" content="https://barada-sample.lgt3232.workers.dev/" />
 <meta property="og:image" content="https://barada-sample.lgt3232.workers.dev/og-barada.jpg" />
 <meta property="og:image:width" content="1200" />
@@ -29,9 +29,10 @@
   "url": "https://barada-sample.lgt3232.workers.dev/",
   "image": "https://barada-sample.lgt3232.workers.dev/og-barada.jpg",
   "telephone": "+82-10-3421-3532",
-  "address": { "@type": "PostalAddress", "streetAddress": "오창읍 주성2길 22-11", "addressLocality": "청주시 청원구", "addressRegion": "충청북도", "addressCountry": "KR" },
+  "address": { "@type": "PostalAddress", "streetAddress": "오창읍 주성2길 22-11, 1층", "addressLocality": "청주시 청원구", "addressRegion": "충청북도", "addressCountry": "KR" },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:00" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "13:00", "closes": "20:00" }
   ],
   "sameAs": ["https://www.instagram.com/design_barada/","https://blog.naver.com/barada_design"]
 }
@@ -119,9 +120,23 @@ button{ font:inherit; color:inherit; }
 .g-wrap{ width:100%; margin:0 auto; }
 @media (min-width:900px){ .g-wrap{ width:min(100% - 40px, var(--wrap)); } }
 .cases{ margin:64px 0 0; padding:0; list-style:none; border-top:1px solid var(--ink); }
-.cases li{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:16px; padding:15px 0; border-bottom:1px solid var(--line); font-size:.95rem; }
+.cases li{ border-bottom:1px solid var(--line); font-size:.95rem; }
+.cases a{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:16px; padding:15px 0; }
+@media (hover:hover){ .cases a:hover span{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; } }
 .cases span{ color:var(--soft); }
 .cases time{ font-family:var(--latin); font-size:.88rem; color:var(--soft); }
+
+/* 진행 순서 (사장님 상담 신청서 원문) */
+.process{ border-top:1px solid var(--line); }
+.steps{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; margin:44px 0 0; padding:0; list-style:none; border-top:1px solid var(--ink); }
+@media (min-width:900px){ .steps{ grid-template-columns:repeat(4,minmax(0,1fr)); } }
+.steps li{ padding:22px 16px 22px 0; border-bottom:1px solid var(--line); }
+.steps .n{ display:block; font-family:var(--latin); font-size:.82rem; letter-spacing:.14em; color:var(--soft); }
+.steps b{ display:block; margin-top:6px; font-weight:500; font-size:1.05rem; }
+.steps small{ display:block; margin-top:4px; font-size:.86rem; color:var(--soft); line-height:1.6; }
+.timing{ display:grid; gap:6px; margin-top:32px; padding:22px 24px; background:var(--tint); border-radius:var(--r); }
+.timing b{ font-weight:500; }
+.timing span{ color:var(--soft); font-size:.95rem; }
 
 /* 상담 · 오시는 길 (R-1: 모바일 지도 1열 전체 폭) */
 .contact{ background:var(--tint); }
@@ -165,13 +180,13 @@ button{ font:inherit; color:inherit; }
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="바라다 공간디자인 처음으로"><img src="bd-mark.webp" alt="brd. 바라다 공간디자인" width="301" height="131" /></a>
-    <nav class="nav" aria-label="주요 메뉴"><a href="#about">ABOUT</a><a href="#works">PORTFOLIO</a><a href="#contact">CONTACT</a></nav>
+    <nav class="nav" aria-label="주요 메뉴"><a href="#about">ABOUT</a><a href="#works">PORTFOLIO</a><a href="#process">PROCESS</a><a href="#contact">CONTACT</a></nav>
     <a class="btn fill head-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf822vCY8yBG3VFQwUfJYAgoz5Af50GTtGQJEQg-M371Se_EQ/viewform" target="_blank" rel="noopener">무료 상담 예약</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="m-nav"><i aria-hidden="true"></i>메뉴</button>
   </div>
 </header>
 <nav class="m-nav" id="m-nav" aria-label="모바일 메뉴">
-  <a href="#about">ABOUT</a><a href="#works">PORTFOLIO</a><a href="#contact">CONTACT</a>
+  <a href="#about">ABOUT</a><a href="#works">PORTFOLIO</a><a href="#process">PROCESS</a><a href="#contact">CONTACT</a>
 </nav>
 
 <main id="top">
@@ -188,7 +203,7 @@ button{ font:inherit; color:inherit; }
     <div class="wrap reveal">
       <p class="label" id="about-h">ABOUT</p>
       <p class="text">누군가의 공간을 꾸며 준다는 것은 경제활동 이전에 보람을 느끼는 일입니다. 책임감을 갖고 믿음을 드리겠습니다.</p>
-      <p class="sign">청주 · 오창 아파트, 상가 인테리어 · 바라다 공간디자인</p>
+      <p class="sign">청주 · 오창 아파트 인테리어 · 바라다 공간디자인</p>
     </div>
   </section>
 
@@ -215,14 +230,37 @@ button{ font:inherit; color:inherit; }
     </div>
     <div class="wrap">
       <ul class="cases reveal">
-        <li><span>오창 대성베르힐 아파트 · 오창 2산단 30평대</span><time datetime="2026-10-12">2026.10</time></li>
-        <li><span>청주 율량금호어울림 센트로 · 24평</span><time datetime="2026-10-11">2026.10</time></li>
-        <li><span>청주 옥산 흥덕 코오롱하늘채 아파트</span><time datetime="2026-05-15">2026.05</time></li>
-        <li><span>청주 오창 롯데캐슬 더하이스트 아파트</span><time datetime="2026-05-08">2026.05</time></li>
-        <li><span>청주 오창 부영아파트 7단지 · 23평</span><time datetime="2026-05-07">2026.05</time></li>
-        <li><span>청주 오창 2산단 대원칸타빌 · 33평</span><time datetime="2026-05-05">2026.05</time></li>
-        <li><span>청주 오창 모아미래도와이드파크 · 25평</span><time datetime="2026-04-29">2026.04</time></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>오창 대성베르힐 아파트 · 오창 2산단 30평대</span><time datetime="2026-10-12">2026.10</time></a></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>청주 율량금호어울림 센트로 · 24평</span><time datetime="2026-10-11">2026.10</time></a></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>청주 옥산 흥덕 코오롱하늘채 아파트</span><time datetime="2026-05-15">2026.05</time></a></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>청주 오창 롯데캐슬 더하이스트 아파트</span><time datetime="2026-05-08">2026.05</time></a></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>청주 오창 부영아파트 7단지 · 23평</span><time datetime="2026-05-07">2026.05</time></a></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>청주 오창 2산단 대원칸타빌 · 33평</span><time datetime="2026-05-05">2026.05</time></a></li>
+        <li><a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener"><span>청주 오창 모아미래도와이드파크 · 25평</span><time datetime="2026-04-29">2026.04</time></a></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="sec process" id="process" aria-labelledby="process-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">PROCESS</p>
+        <h2 id="process-h" class="h2">상담 및 공사 진행 순서</h2>
+      </div>
+      <ol class="steps reveal">
+        <li><span class="n">01</span><b>상담 신청</b><small>온라인 혹은 유선</small></li>
+        <li><span class="n">02</span><b>현장 실측</b><small>현장 상태 확인 및 실측 · 대략적인 공사 내용 상의</small></li>
+        <li><span class="n">03</span><b>사무실 내방 상담</b><small>견적서 내용 설명</small></li>
+        <li><span class="n">04</span><b>공사 계약</b></li>
+        <li><span class="n">05</span><b>디자인 작업</b></li>
+        <li><span class="n">06</span><b>공사</b></li>
+        <li><span class="n">07</span><b>사진 촬영</b></li>
+        <li><span class="n">08</span><b>사후 관리</b></li>
+      </ol>
+      <div class="timing reveal">
+        <b>전체공사 상담 신청은 공사 희망일로부터 최소 1~2달 전에 연락주세요.</b>
+        <span>부분공사는 매월 일정에 따라 다르므로 일단 연락주세요.</span>
+      </div>
     </div>
   </section>
 
@@ -236,9 +274,8 @@ button{ font:inherit; color:inherit; }
           <a class="btn" href="https://open.kakao.com/o/sVelOIGe" target="_blank" rel="noopener">카카오톡 상담</a>
           <a class="btn" href="tel:01034213532">전화하기</a>
         </div>
-        <p class="note">블로그 안의 &lt;온라인 견적신청&gt;으로도 견적 문의가 가능합니다.</p>
         <dl class="info">
-          <div><dt>주소</dt><dd><b>충북 청주시 청원구 오창읍 주성2길 22-11</b><small><a href="https://map.naver.com/p/entry/place/1365790485" target="_blank" rel="noopener">네이버 지도에서 보기</a></small></dd></div>
+          <div><dt>주소</dt><dd><b>충북 청주시 청원구 오창읍 주성2길 22-11, 1층</b><small><a href="https://map.naver.com/p/entry/place/1365790485" target="_blank" rel="noopener">네이버 지도에서 보기</a></small></dd></div>
           <div><dt>영업</dt><dd><b>월 – 토 09:00 – 20:00</b><small>휴게시간 12:00 – 13:00 · 매주 일요일 정기휴무</small></dd></div>
           <div><dt>전화</dt><dd><a href="tel:01034213532">010-3421-3532</a></dd></div>
         </dl>
@@ -252,7 +289,7 @@ button{ font:inherit; color:inherit; }
   <div class="wrap">
     <img src="bd-logo.webp" alt="" width="321" height="237" loading="lazy" />
     <div>
-      <p>바라다 공간디자인 · 충북 청주시 청원구 오창읍 주성2길 22-11 · 010-3421-3532 · 월 – 토 09:00 – 20:00, 일요일 휴무</p>
+      <p>바라다 공간디자인 · 충북 청주시 청원구 오창읍 주성2길 22-11, 1층 · 010-3421-3532 · 월 – 토 09:00 – 20:00(휴게 12:00 – 13:00), 일요일 휴무</p>
       <p><a href="https://www.instagram.com/design_barada/" target="_blank" rel="noopener">Instagram</a> · <a href="https://blog.naver.com/barada_design" target="_blank" rel="noopener">Blog</a> · © 바라다 공간디자인</p>
     </div>
   </div>
