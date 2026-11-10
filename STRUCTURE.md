@@ -1,4 +1,4 @@
-# STRUCTURE · barada-sample (v0.2 · 사진 중심 갤러리형)
+# STRUCTURE · barada-sample (v0.3 · 사진 중심 갤러리형)
 
 ```
 barada-sample/
